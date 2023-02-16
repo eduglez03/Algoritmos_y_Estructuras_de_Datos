@@ -34,8 +34,8 @@ int main() {
   y.write();
 
   std::cout << "x == y? " << (x.is_equal(y) ? "true" : "false") << std::endl;
-  std::cout << "x < y? " << (x.is_greater(y) ? "true" : "false") << std::endl;
-  std::cout << "x > y? " << (x.is_less(y) ? "true" : "false") << std::endl;
+  std::cout << "x > y? " << (x.is_greater(y) ? "true" : "false") << std::endl;
+  std::cout << "x < y? " << (x.is_less(y) ? "true" : "false") << std::endl;
   std::cout << "x = 0? " << (x.is_cero() ? "true" : "false") << std::endl;
 
   // FASE III
