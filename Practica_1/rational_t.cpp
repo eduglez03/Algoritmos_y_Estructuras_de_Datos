@@ -113,6 +113,13 @@ rational_t rational_t::divide(const rational_t& r) {
   return rational_t (numerador, denominador);
 }
 
+// MODIFICACIÓN
+bool rational_t::is_integer() const {
+  if (get_num() % get_den() == 0) {
+    return true;
+  }
+  return false;
+}
 
 // E/S
 void rational_t::write(std::ostream& os) const {

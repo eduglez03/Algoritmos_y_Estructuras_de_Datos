@@ -6,7 +6,7 @@
 // PRÁCTICA Nº: 1
 // COMENTARIOS: Se lleva a cabo la practica bajo las condiciones de la guía de estilo de google
 
-#pragma once
+// #pragma once
 
 #include <iostream>
 #include <cassert>
@@ -41,6 +41,9 @@ class rational_t {
     rational_t substract(const rational_t&);
     rational_t multiply(const rational_t&);
     rational_t divide(const rational_t&);
+
+    // MODIFICACIÓN
+    bool is_integer() const;
   
     void write(std::ostream& = std::cout) const; // Escritura a pantalla
     void read(std::istream& = std::cin); // Lectura desde teclado

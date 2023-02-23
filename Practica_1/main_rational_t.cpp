@@ -50,6 +50,10 @@ int main() {
   
   std::cout << "a / b: ";
   a.divide(b).write();
+
+  // MODIFICACIÓN
+  c.write();
+  std::cout << c.get_num() << " / " << c.get_den() << " = " << (c.is_integer() ? "Es entero" : "No es entero") << std::endl;
   
   return 0;
 }
