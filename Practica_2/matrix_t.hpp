@@ -342,3 +342,32 @@ template<class T> void matrix_t<T>::SumarFilas() {
   }
   std::cout << std::endl;
 }
+
+
+
+
+template<class T> void matrix_t<T>::Serpiente() {
+  vector<double> filas;
+
+  for (int i = 1; i <= get_m();) {
+    if (i % 2 != 0) {
+      for (int j = 1; j <= get_n();) {
+        filas.push_back(at(i,j));
+        j++;
+      }
+    }
+    else {
+      for (int j = get_n(); j >= 1;) {
+        filas.push_back(at(i,j));
+        j++;
+      }
+    } 
+    i++;
+  }
+
+  for (int i = 0; i < filas.size();) {
+    std::cout << filas[i] << " ";
+    i++;
+  }
+  std::cout << std::endl << std::endl;
+}
