@@ -431,7 +431,7 @@ void print_zeros(const SparsePolynomial& spol) {
   vector_t<int> inx_non_zeros;
   inx_non_zeros.resize(spol.get_n());
   
-  // MArcamos con un 1 las posiciones no cero
+  // Marcamos con un 1 las posiciones no cero
   for (int i = 0; i < spol.get_nz(); i++) {
     inx_non_zeros[spol.at(i).get_inx()] = 1;
   }
@@ -453,5 +453,19 @@ void print_zeros(const SparsePolynomial& spol) {
   std::cout << std::endl;
 
 }
+
+
+void MonomiosConsecutivos(const SparsePolynomial& spol) {
+
+  for (int i = 0; i < spol.get_nz() - 1; i++) {
+    if((spol.at(i + 1).get_inx() - spol.at(i).get_inx()) == 1) {
+      std::cout << spol.at(i).get_val() << "x^" << spol.at(i).get_inx() << " y " << spol.at(i + 1).get_val() << "x^" << spol.at(i + 1).get_inx() << std::endl;
+    }
+  }
+
+}
+
+
+
 
 #endif  // POLYNOMIAL_H_

@@ -96,6 +96,10 @@ int main() {
   // POSIBLE MODIFICACION: Suma de los elementos de cada fila y almacenarlos en un vector
   std::cout << "La suma de los valores de cada fila son: " << std::endl;
   A.SumarFilas();
+
+  // MODIFICACION QUE ME TOCO EN CLASE
+  std::cout << "La serpiente es: " << std::endl;
+  A.Serpiente();
   
   return 0;
 }

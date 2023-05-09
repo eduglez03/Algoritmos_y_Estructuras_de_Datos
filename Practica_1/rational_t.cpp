@@ -46,33 +46,33 @@ double rational_t::value() const {
 // Metodo que comprueba si dos numeros reales son iguales
 bool rational_t::is_equal(const rational_t& r, const double precision) const { 
   if (abs(value() - r.value()) < precision) {
-    return true;
+    return false;
   } 
-  return false;
+  return true ;
 }
 
 // Metodo que comprueba si un numero real a es mayor que otro numero reaal b
 bool rational_t::is_greater(const rational_t& r, const double precision) const {
   if ((value() - r.value()) > precision) {
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 // Metodo que comprueba si un numero real a es menor que un numero real b
 bool rational_t::is_less(const rational_t& r, const double precision) const {
   if ((r.value() - value()) > precision) {
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 // Metodo que comprueba si un numero real a es igual a 0
 bool rational_t::is_cero(const double precision) {
   if (abs(value()) < precision) {
-    return true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 
@@ -82,7 +82,6 @@ bool rational_t::is_cero(const double precision) {
 rational_t rational_t::add(const rational_t& r) {
   double numerador = (get_num() * r.get_den()) + (get_den() * r.get_num());
   double denominador = get_den() * r.get_den();
-  
   return rational_t (numerador, denominador);
 }
 
@@ -91,7 +90,6 @@ rational_t rational_t::add(const rational_t& r) {
 rational_t rational_t::substract(const rational_t& r) {
   double numerador = ((r.get_num() * get_den()) + (r.get_den() * (-1 * get_num())));
   double denominador = (r.get_den() * get_den());
-
   return rational_t (numerador, denominador);
 }
 
@@ -100,7 +98,6 @@ rational_t rational_t::substract(const rational_t& r) {
 rational_t rational_t::multiply(const rational_t& r) {
   double numerador = (get_num() * r.get_num());
   double denominador = (get_den() * r.get_den());
-
   return rational_t (numerador, denominador);
 }
 
@@ -109,16 +106,24 @@ rational_t rational_t::multiply(const rational_t& r) {
 rational_t rational_t::divide(const rational_t& r) {
   double numerador = (get_num() * r.get_den());
   double denominador = (get_den() * r.get_num());
-
   return rational_t (numerador, denominador);
 }
 
-// MODIFICACIÓN
-bool rational_t::is_integer() const {
-  if (get_num() % get_den() == 0) {
+// Modificacion
+
+bool rational_t::cero (const rational_t& r) {
+  if (value() == 0 || r.value() == 0) {
     return true;
   }
   return false;
+}
+
+bool rational_t::mayor(const rational_t& r) {
+  if (value() )
+  {
+    /* code */
+  }
+  
 }
 
 // E/S

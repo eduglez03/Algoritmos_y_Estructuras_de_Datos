@@ -6,7 +6,7 @@
 // PRÁCTICA Nº: 1
 // COMENTARIOS: Se lleva a cabo la practica bajo las condiciones de la guía de estilo de google
 
-// #pragma once
+#pragma once
 
 #include <iostream>
 #include <cassert>
@@ -28,7 +28,7 @@ class rational_t {
     void set_num(const int);
     void set_den(const int);
 
-    double value(void) const;
+    double value(void) const; // Metodo para calcular el valor decimal de un racional
 
     // FASE II
     bool is_equal(const rational_t&, const double precision = EPSILON) const;
@@ -42,8 +42,8 @@ class rational_t {
     rational_t multiply(const rational_t&);
     rational_t divide(const rational_t&);
 
-    // MODIFICACIÓN
-    bool is_integer() const;
+    // MODIFICACION
+    bool cero(const rational_t& r);
   
     void write(std::ostream& = std::cout) const; // Escritura a pantalla
     void read(std::istream& = std::cin); // Lectura desde teclado

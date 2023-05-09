@@ -49,6 +49,7 @@ template<class T> class matrix_t {
     void traspuesta(const matrix_t<T>& A);
     void filas_pares();
     void SumarFilas();
+    void Serpiente();
 
   private:
     int m_, n_; // m_ filas y n_ columnas
@@ -236,7 +237,7 @@ template<class T> void matrix_t<T>::multiply(const matrix_t<T>& A, const matrix_
 }
 
 
-// MODIFICACION 
+// ------------------------------------------------------------ MODIFICACION --------------------------------------------------------------------
 
 /**
  * @brief Calcular la suma de la diagonal principal de una matriz
@@ -343,9 +344,11 @@ template<class T> void matrix_t<T>::SumarFilas() {
   std::cout << std::endl;
 }
 
-
-
-
+/**
+ * @brief Funcion que imprime la serpiente de una matriz
+ * 
+ * @tparam T 
+ */
 template<class T> void matrix_t<T>::Serpiente() {
   vector<double> filas;
 
@@ -359,11 +362,12 @@ template<class T> void matrix_t<T>::Serpiente() {
     else {
       for (int j = get_n(); j >= 1;) {
         filas.push_back(at(i,j));
-        j++;
+        j--;
       }
-    } 
+    }
     i++;
   }
+
 
   for (int i = 0; i < filas.size();) {
     std::cout << filas[i] << " ";

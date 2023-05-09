@@ -34,8 +34,8 @@ int main() {
   y.write();
 
   std::cout << "x == y? " << (x.is_equal(y) ? "true" : "false") << std::endl;
-  std::cout << "x > y? " << (x.is_greater(y) ? "true" : "false") << std::endl;
-  std::cout << "x < y? " << (x.is_less(y) ? "true" : "false") << std::endl;
+  std::cout << "x < y? " << (x.is_greater(y) ? "true" : "false") << std::endl;
+  std::cout << "x > y? " << (x.is_less(y) ? "true" : "false") << std::endl;
   std::cout << "x = 0? " << (x.is_cero() ? "true" : "false") << std::endl;
 
   // FASE III
@@ -50,10 +50,6 @@ int main() {
   
   std::cout << "a / b: ";
   a.divide(b).write();
-
-  // MODIFICACIÓN
-  c.write();
-  std::cout << c.get_num() << " / " << c.get_den() << " = " << (c.is_integer() ? "Es entero" : "No es entero") << std::endl;
   
   return 0;
 }

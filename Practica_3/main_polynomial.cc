@@ -133,6 +133,16 @@ int main() {
   // Muestra las posiciones que tienen un cero
   print_zeros(sp1);
   std::cout << std::endl;
+
+  // MODIFICACION CLASE
+  std::cout << "Monomios Consecutivos en sp1: " << std::endl;
+  MonomiosConsecutivos(sp1);
+  std::cout << "Monomios Consecutivos en sp2: " << std::endl;
+  MonomiosConsecutivos(sp2);
+  std::cout << "Monomios Consecutivos en sp3: " << std::endl;
+  MonomiosConsecutivos(sp3);
+
+  std::cout << std::endl;
   
   return 0;
 }
